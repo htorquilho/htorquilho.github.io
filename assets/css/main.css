@@ -1830,15 +1830,15 @@ input, select, textarea {
 				}
 
 				ul.social li a.fa-linkedin-in {
-					background-color: #2daae4;
+					background-color: #3498db;
 				}
 
 				ul.social li a.fa-github {
-					background-color: #ffffff93;
+					background-color: #aab7b8;
 				}
 
 				ul.social li a.fa-envelope {
-					background-color: #e9e9e9b7;
+					background-color: #3498db;
 				}
 
 				ul.social li a.fa-whatsapp {
@@ -1846,11 +1846,11 @@ input, select, textarea {
 				}
 
 				ul.social li a.fa-telegram {
-					background-color: #32b7ff;
+					background-color: #3498db;
 				}
 
 				ul.social li a.fa-phone {
-					background-color: #5a5d81;
+					background-color: #aab7b8;
 				}
 
 				ul.social li a:hover {
