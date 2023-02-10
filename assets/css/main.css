@@ -175,8 +175,12 @@ input, select, textarea {
 			font-weight: 700;
 		}
 	
-	.profissao {
-		color: #1E90FF;
+	.dev {
+		color: orangered;
+	}
+
+	.git {
+		color: orangered;
 	}
 
 	.escola {
@@ -1834,7 +1838,7 @@ input, select, textarea {
 				}
 
 				ul.social li a.fa-github {
-					background-color: #aab7b8;
+					background-color: orange;
 				}
 
 				ul.social li a.fa-envelope {
@@ -1850,7 +1854,7 @@ input, select, textarea {
 				}
 
 				ul.social li a.fa-phone {
-					background-color: #aab7b8;
+					background-color: #f6e5bc;
 				}
 
 				ul.social li a:hover {
