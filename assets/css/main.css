@@ -1646,6 +1646,10 @@ input, select, textarea {
 			width: 100%;
 		}
 
+		.perfil {
+			box-shadow: 1px 1px 5px 5px rgb(28, 28, 28, 0.6);
+		}
+
 		.image.fit {
 			display: block;
 			width: 100%;
@@ -1699,7 +1703,7 @@ input, select, textarea {
 		border-radius: 8px;
 		text-shadow: -1px -1px 0.5px rgba(0, 0, 0, 0.5);
 		overflow: hidden;
-		box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px 2px 1px 0px rgba(255, 255, 255, 0.75);
+		box-shadow: inset 0.2px 0.2px 1px 1px rgba(0, 0, 0, 0.6), inset 0px 2px 1px 0px rgba(255, 255, 255, 0.75);
 		background-color: #32CD32;
 		padding: 1em 2.35em 1em 2.35em;
 		font-size: 1.1em;
