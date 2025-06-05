@@ -1,32 +1,66 @@
-Miniport by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 
+# 🌐 htorquilho.github.io — Currículo Online e Portfólio
 
-A super simple responsive portfolio template. It's only a single page because hey, sometimes
-you don't need a half dozen pages to make your point.
+Este repositório contém meu **currículo online e portfólio**, desenvolvido em HTML, CSS e JavaScript. O objetivo é apresentar minhas informações profissionais, experiências, habilidades e projetos de desenvolvimento.
 
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
+A página está hospedada diretamente no GitHub Pages e serve como meu cartão de visita digital.
 
-(* = Not included)
+## 🚀 Acesse o Portfólio
 
-Feedback, bug reports, and comments are not only welcome, but strongly encouraged :)
+👉 [htorquilho.github.io](https://htorquilho.github.io)
 
-AJ
-aj@lkn.io | @ajlkn
+## 🛠️ Tecnologias Utilizadas
 
-PS: Not sure how to get that contact form working? Give formspree.io a try (it's awesome).
+- HTML5
+- CSS3
+- JavaScript
 
+## 📄 Funcionalidades
 
-Credits:
+- ✅ Apresentação de informações profissionais (sobre mim, formação, experiências).
+- ✅ Listagem dos projetos desenvolvidos.
+- ✅ Links diretos para redes profissionais (LinkedIn, GitHub, entre outros).
+- ✅ Layout responsivo, acessível de dispositivos desktop, tablet e mobile.
 
-	Demo Images:
-		Unsplash (unsplash.com)
+## 💻 Como Executar Localmente
 
-	Icons:
-		Font Awesome (fontawesome.io)
+1. Clone este repositório:
 
-	Other:
-		jQuery (jquery.com)
-		Responsive Tools (github.com/ajlkn/responsive-tools)# htorquilho.github.io
+```bash
+git clone https://github.com/htorquilho/htorquilho.github.io.git
+```
+
+2. Acesse a pasta do projeto:
+
+```bash
+cd htorquilho.github.io
+```
+
+3. Abra o arquivo `index.html` no navegador ou use a extensão **Live Server** no VS Code para executar localmente.
+
+## 🗂️ Estrutura do Projeto
+
+```
+htorquilho.github.io/
+├── css/               # Arquivos de estilo
+├── js/                # Scripts JavaScript (se houver)
+├── img/               # Imagens usadas no site
+├── index.html         # Página principal
+└── README.md          # Documentação do projeto
+```
+
+## 🎯 Objetivos do Projeto
+
+- Ter um currículo e portfólio online sempre atualizado.
+- Facilitar que recrutadores, parceiros e clientes conheçam meu trabalho.
+- Praticar e demonstrar habilidades em desenvolvimento web.
+
+## 🔗 Links Úteis
+
+- [GitHub](https://github.com/htorquilho)
+- [LinkedIn](https://www.linkedin.com/in/htorquilho/)
+- [Portfólio Online](https://htorquilho.github.io)
+
+## 🏗️ Licença
+
+- Esta página foi desenvolvido utilizando como base um template disponibilizado gratuitamente pela HTML5 UP, com adaptações e personalizações para meu currículo online e portfólio.
