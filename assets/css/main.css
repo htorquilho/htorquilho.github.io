@@ -533,6 +533,10 @@ input, select, textarea {
 					padding-top: 5em;
 				}
 
+		#three p {
+			text-align: justify;
+		}
+
 		@media screen and (max-width: 1800px) {
 
 			.row {
@@ -2525,8 +2529,8 @@ input, select, textarea {
 		input[type="reset"].primary,
 		input[type="button"].primary,
 		.button.primary {
-			background-color: #49bf9d;
-			border-color: #49bf9d;
+			background-color: #49b7bf;
+			border-color: #49a1bf;
 			color: #ffffff !important;
 		}
 
@@ -2534,16 +2538,16 @@ input, select, textarea {
 			input[type="reset"].primary:hover,
 			input[type="button"].primary:hover,
 			.button.primary:hover {
-				background-color: #5cc6a7;
-				border-color: #5cc6a7;
+				background-color: #5c96c6;
+				border-color: #5caac6;
 			}
 
 			input[type="submit"].primary:active,
 			input[type="reset"].primary:active,
 			input[type="button"].primary:active,
 			.button.primary:active {
-				background-color: #3eb08f;
-				border-color: #3eb08f;
+				background-color: #3ea1b0;
+				border-color: #3e9fb0;
 			}
 
 		input[type="submit"].disabled, input[type="submit"]:disabled,
@@ -2600,7 +2604,7 @@ input, select, textarea {
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
-		background-color: #1f1815;
+		background-color: rgb(44, 15, 0);
 		background-attachment: scroll,								scroll;
 		background-image: url("images/overlay.png"), url("../../images/bg.jpg");
 		background-position: top left,							top left;
@@ -3088,9 +3092,9 @@ input, select, textarea {
 				background-attachment: scroll;
 				background-color: #1f1815;
 				background-image: url("images/overlay.png"), url("../../images/bg.jpg");
-				background-position: top left,						bottom center;
-				background-repeat: repeat,							no-repeat;
-				background-size: auto,							cover;
+				background-position: top left, bottom center;
+				background-repeat: repeat, no-repeat;
+				background-size: auto, cover;
 				bottom: auto;
 				left: auto;
 				padding: 4em 4em 6em 4em;
@@ -3173,6 +3177,11 @@ input, select, textarea {
 					font-size: 1.35em;
 				}
 
+				.subline {
+					display: block;
+					font-size: 0.9em;
+				}
+
 		/* Footer */
 
 			#footer {
@@ -3216,6 +3225,10 @@ input, select, textarea {
 				#header h1 br {
 					display: none;
 				}
+
+			#three p {
+				text-align: justify;
+			}
 
 		/* Footer */
 
