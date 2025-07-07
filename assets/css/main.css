@@ -110,14 +110,14 @@ input, select, textarea {
 		-webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-		border-bottom: dotted 1px;
-		color: #33bcf3;
+		border-bottom: none;
+		color: #006DB2;
 		text-decoration: none;
 	}
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #33bcf3 !important;
+			color: #006DB2 !important;
 			text-decoration: none;
 		}
 
@@ -533,9 +533,7 @@ input, select, textarea {
 					padding-top: 5em;
 				}
 
-		#three p {
-			text-align: justify;
-		}
+		
 
 		@media screen and (max-width: 1800px) {
 
@@ -1845,7 +1843,7 @@ input, select, textarea {
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #498abf;
+			border-color: #006DB2;
 		}
 
 	select {
@@ -1950,7 +1948,7 @@ input, select, textarea {
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			border-color: #4982bf;
+			border-color: #006DB2;
 		}
 
 	input[type="checkbox"] + label:before {
@@ -2476,8 +2474,8 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
 		.button:hover {
-			border-color: #3b82b5;
-			color: #3b82b5 !important;
+			border-color: #006DB2;
+			color: #006DB2 !important;
 		}
 
 		input[type="submit"]:active,
@@ -2485,8 +2483,8 @@ input, select, textarea {
 		input[type="button"]:active,
 		.button:active {
 			background-color: rgba(73, 169, 191, 0.1);
-			border-color: #4976bf;
-			color: #4980bf !important;
+			border-color: #006DB2;
+			color: #006DB2 !important;
 		}
 
 		input[type="submit"].icon,
@@ -2529,8 +2527,8 @@ input, select, textarea {
 		input[type="reset"].primary,
 		input[type="button"].primary,
 		.button.primary {
-			background-color: #4982bf;
-			border-color: #497cbf;
+			background-color: #006DB2;
+			border-color: #006DB2;
 			color: #ffffff !important;
 		}
 
@@ -2546,8 +2544,8 @@ input, select, textarea {
 			input[type="reset"].primary:active,
 			input[type="button"].primary:active,
 			.button.primary:active {
-				background-color: #3e6ab0;
-				border-color: #3e73b0;
+				background-color: #006DB2;
+				border-color: #006DB2;
 			}
 
 		input[type="submit"].disabled, input[type="submit"]:disabled,
