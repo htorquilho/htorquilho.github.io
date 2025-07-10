@@ -1,66 +1,51 @@
+# 🌐 Portfólio de Henrique Torquilho
 
-# 🌐 htorquilho.github.io — Currículo Online e Portfólio
+Bem-vindo ao meu portfólio online! Aqui você encontra uma seleção dos meus projetos, informações sobre minha trajetória e um formulário para contato direto.
 
-Este repositório contém meu **currículo online e portfólio**, desenvolvido em HTML, CSS e JavaScript. O objetivo é apresentar minhas informações profissionais, experiências, habilidades e projetos de desenvolvimento.
+## 👨‍💻 Sobre mim
 
-A página está hospedada diretamente no GitHub Pages e serve como meu cartão de visita digital.
+Sou **Henrique Torquilho Almeida**, desenvolvedor FullStack com foco em JavaScript (React, Node.js) e especialista em **Direito da Tecnologia da Informação e Proteção de Dados Pessoais**.
 
-## 🚀 Acesse o Portfólio
+Tenho experiência na criação de:
 
-👉 [htorquilho.github.io](https://htorquilho.github.io)
+- Sites institucionais e landing pages
+- Sistemas web e APIs RESTful
+- Integrações com serviços externos (APIs, autenticação)
+- Aplicações com foco em UX, acessibilidade e segurança
 
-## 🛠️ Tecnologias Utilizadas
+## 🚀 Acesse o portfólio
 
-- HTML5
-- CSS3
-- JavaScript
+🔗 [htorquilho.github.io](https://htorquilho.github.io)
 
-## 📄 Funcionalidades
+## 🛠 Tecnologias utilizadas
 
-- ✅ Apresentação de informações profissionais (sobre mim, formação, experiências).
-- ✅ Listagem dos projetos desenvolvidos.
-- ✅ Links diretos para redes profissionais (LinkedIn, GitHub, entre outros).
-- ✅ Layout responsivo, acessível de dispositivos desktop, tablet e mobile.
+- HTML5, CSS3 (Flexbox, Grid)
+- JavaScript (Vanilla + jQuery)
+- FormSubmit para envio de mensagens
+- Responsividade com breakpoints e layout adaptativo
+- Tema base: [Strata](https://html5up.net/strata) (HTML5 UP), com personalizações
 
-## 💻 Como Executar Localmente
-
-1. Clone este repositório:
-
-```bash
-git clone https://github.com/htorquilho/htorquilho.github.io.git
-```
-
-2. Acesse a pasta do projeto:
-
-```bash
-cd htorquilho.github.io
-```
-
-3. Abra o arquivo `index.html` no navegador ou use a extensão **Live Server** no VS Code para executar localmente.
-
-## 🗂️ Estrutura do Projeto
+## 📁 Estrutura do projeto
 
 ```
-htorquilho.github.io/
-├── css/               # Arquivos de estilo
-├── js/                # Scripts JavaScript (se houver)
-├── img/               # Imagens usadas no site
-├── index.html         # Página principal
-└── README.md          # Documentação do projeto
+.
+├── assets/
+│   ├── css/
+│   │   └── main.css          # Estilos personalizados e do tema
+│   └── js/
+│       ├── main.js           # Scripts de layout e comportamento
+│       ├── util.js           # Funções utilitárias (menu, placeholder)
+│       ├── breakpoints.min.js
+│       └── browser.min.js
+├── images/                   # Avatares, projetos e favicon
+├── index.html                # Página principal do portfólio
+└── obrigado.html             # Página de confirmação após envio do formulário
 ```
 
-## 🎯 Objetivos do Projeto
+## 📫 Contato
 
-- Ter um currículo e portfólio online sempre atualizado.
-- Facilitar que recrutadores, parceiros e clientes conheçam meu trabalho.
-- Praticar e demonstrar habilidades em desenvolvimento web.
+Você pode me encontrar no [LinkedIn](https://www.linkedin.com/in/henrique-torquilho/) ou enviar um e-mail para **henriquetorquilho@protonmail.com**.
 
-## 🔗 Links Úteis
+## 📜 Licença
 
-- [GitHub](https://github.com/htorquilho)
-- [LinkedIn](https://www.linkedin.com/in/htorquilho/)
-- [Portfólio Online](https://htorquilho.github.io)
-
-## 🏗️ Licença
-
-- Esta página foi desenvolvido utilizando como base um template disponibilizado gratuitamente pela HTML5 UP, com adaptações e personalizações para meu currículo online e portfólio.
+Este portfólio utiliza como base o tema Strata do [HTML5 UP](https://html5up.net/strata), licenciado sob [Creative Commons Attribution 3.0](https://html5up.net/license).
