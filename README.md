@@ -1,51 +1,45 @@
-# 🌐 Portfólio de Henrique Torquilho
+# 🌐 htorquilho.github.io
 
-Bem-vindo ao meu portfólio online! Aqui você encontra uma seleção dos meus projetos, informações sobre minha trajetória e um formulário para contato direto.
+Este é o repositório do meu portfólio profissional, desenvolvido para apresentar meus projetos, habilidades e formas de contato de maneira leve, responsiva e acessível.
 
-## 👨‍💻 Sobre mim
+## ✨ Destaques
 
-Sou **Henrique Torquilho Almeida**, desenvolvedor FullStack com foco em JavaScript (React, Node.js) e especialista em **Direito da Tecnologia da Informação e Proteção de Dados Pessoais**.
+- ✅ **Código HTML semântico**, com melhor estrutura e acessibilidade.
+- 🎨 **CSS modularizado e otimizado**: agora dividido em seções claras como `base`, `layout` e `components`.
+- 📱 **Design responsivo**: adaptado para diferentes tamanhos de tela.
+- 🚀 **Desempenho aprimorado**: carregamento otimizado de imagens e organização de estilos.
+- 🧩 **Foco na manutenção**: fácil de atualizar e escalar.
 
-Tenho experiência na criação de:
-
-- Sites institucionais e landing pages
-- Sistemas web e APIs RESTful
-- Integrações com serviços externos (APIs, autenticação)
-- Aplicações com foco em UX, acessibilidade e segurança
-
-## 🚀 Acesse o portfólio
-
-🔗 [htorquilho.github.io](https://htorquilho.github.io)
 
 ## 🛠 Tecnologias utilizadas
 
-- HTML5, CSS3 (Flexbox, Grid)
-- JavaScript (Vanilla + jQuery)
-- FormSubmit para envio de mensagens
-- Responsividade com breakpoints e layout adaptativo
-- Tema base: [Strata](https://html5up.net/strata) (HTML5 UP), com personalizações
+- HTML5  
+- CSS3 (Flexbox, Grid)  
+- JavaScript (Vanilla + jQuery)  
+- FormSubmit para envio de mensagens via formulário  
+- Hospedagem gratuita via GitHub Pages  
+
+---
 
 ## 📁 Estrutura do projeto
 
 ```
-.
 ├── assets/
 │   ├── css/
-│   │   └── main.css          # Estilos personalizados e do tema
+│   │   ├── base.css          # Reset e estilos básicos
+│   │   ├── layout.css        # Estrutura do site e grid
+│   │   ├── components.css    # Botões, formulários e elementos reutilizáveis
+│   │   └── utilities.css     # Classes utilitárias reutilizáveis
+|   |   └── vendors.css       # Estilos de terceiros   
 │   └── js/
-│       ├── main.js           # Scripts de layout e comportamento
-│       ├── util.js           # Funções utilitárias (menu, placeholder)
-│       ├── breakpoints.min.js
-│       └── browser.min.js
-├── images/                   # Avatares, projetos e favicon
+│       ├── main.js           # Scripts principais
+│       ├── util.js           # Funções utilitárias
+├── images/                   # Avatares, projetos, favicon
 ├── index.html                # Página principal do portfólio
-└── obrigado.html             # Página de confirmação após envio do formulário
+└── thanks.html               # Página de confirmação após envio do formulário
 ```
-
-## 📫 Contato
-
-Você pode me encontrar no [LinkedIn](https://www.linkedin.com/in/henrique-torquilho/) ou enviar um e-mail para **henriquetorquilho@protonmail.com**.
 
 ## 📜 Licença
 
-Este portfólio utiliza como base o tema Strata do [HTML5 UP](https://html5up.net/strata), licenciado sob [Creative Commons Attribution 3.0](https://html5up.net/license).
+Este portfólio utiliza como base o tema Strata do HTML5 UP, licenciado sob Creative Commons Attribution 3.0.  
+Personalizações e código próprio são de minha autoria.
