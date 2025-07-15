@@ -1,0 +1,41 @@
+/* Section | Article */
+
+/* Centraliza o texto para as seções ou artigos com a classe "special" */
+section.special, article.special {
+	text-align: center;
+}
+
+/* Define estilo para parágrafos dentro de qualquer header */
+header p {
+	color: #b2b2b2; /* Cor cinza clara para o texto */
+	position: relative; /* Permite posicionamento relativo se necessário */
+	margin: 0 0 1.5em 0; /* Margem inferior para espaçamento */
+}
+
+/* Ajusta o parágrafo que segue imediatamente um <h2> dentro de um header */
+header h2 + p {
+	font-size: 1.25em; /* Tamanho de fonte maior para destaque */
+	margin-top: -1em; /* Reduz o espaço acima para ficar mais próximo do h2 */
+	line-height: 1.5em; /* Altura de linha confortável para leitura */
+}
+
+/* Ajusta o parágrafo que segue imediatamente um <h3> dentro de um header */
+header h3 + p {
+	font-size: 1.1em; /* Fonte um pouco maior que padrão */
+	margin-top: -0.8em; /* Reduz um pouco o espaçamento superior */
+	line-height: 1.5em; /* Altura da linha */
+}
+
+/* Ajusta parágrafos que seguem imediatamente h4, h5 ou h6 dentro de um header */
+header h4 + p,
+header h5 + p,
+header h6 + p {
+	font-size: 0.9em; /* Fonte menor para sub-títulos */
+	margin-top: -0.6em; /* Espaçamento superior menor para aproximar */
+	line-height: 1.5em; /* Altura da linha */
+}
+
+/* Define um tamanho de fonte maior para títulos h2 dentro de headers com classe "major" */
+header.major h2 {
+	font-size: 2em; /* Fonte bem grande para destaque principal */
+}

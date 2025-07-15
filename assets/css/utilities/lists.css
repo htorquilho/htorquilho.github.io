@@ -1,0 +1,48 @@
+/* ================= LISTAS ================= */
+
+/* Lista ordenada (numerada) */
+ol {
+	list-style: decimal;      /* Usa números decimais para marcar os itens */
+	margin: 0 0 2em 0;        /* Margem inferior para espaçamento */
+	padding-left: 1.25em;     /* Espaço à esquerda para o marcador */
+}
+
+/* Itens dentro da lista ordenada */
+ol li {
+	padding-left: 0.25em;     /* Pequeno espaçamento interno à esquerda do texto */
+}
+
+/* Lista não ordenada (com marcadores padrão) */
+ul {
+	list-style: disc;         /* Marcadores em forma de disco (bolinhas) */
+	margin: 0 0 2em 0;        /* Margem inferior para espaçamento */
+	padding-left: 1em;        /* Espaço à esquerda para os marcadores */
+}
+
+/* Itens dentro da lista não ordenada */
+ul li {
+	padding-left: 0.5em;      /* Espaçamento interno à esquerda do texto */
+}
+
+/* Lista não ordenada alternativa sem marcadores */
+ul.alt {
+	list-style: none;         /* Remove os marcadores padrão */
+	padding-left: 0;          /* Remove o recuo à esquerda */
+}
+
+/* Itens da lista alternativa */
+ul.alt li {
+	border-top: solid 2px #efefef; /* Linha superior para separar itens */
+	padding: 0.5em 0;               /* Espaçamento vertical */
+}
+
+/* Remove a borda e o padding do primeiro item da lista alternativa */
+ul.alt li:first-child {
+	border-top: 0;
+	padding-top: 0;
+}
+
+/* Lista de definição (dl) */
+dl {
+	margin: 0 0 2em 0;        /* Margem inferior para espaçamento */
+}

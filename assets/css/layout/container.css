@@ -1,0 +1,82 @@
+/* ================= CONTAINER ================= */
+
+/* Classe base .container para centralizar conteúdo com margem automática e largura máxima */
+.container {
+	margin: 0 auto; /* Centraliza horizontalmente */
+	max-width: calc(100% - 4em); /* Largura máxima com 2em de margem dos lados */
+	width: 100%; /* Ocupa 100% da largura disponível */
+}
+
+/* Variantes de largura para containers */
+
+/* Muito pequeno: 25% da largura do contêiner pai */
+.container.xsmall {
+	width: 25%;
+}
+
+/* Pequeno: 50% da largura */
+.container.small {
+	width: 50%;
+}
+
+/* Médio: 75% da largura */
+.container.medium {
+	width: 75%;
+}
+
+/* Grande: 125% da largura (maior que o contêiner pai, ultrapassa o limite) */
+.container.large {
+	width: 125%;
+}
+
+/* Muito grande: 150% da largura */
+.container.xlarge {
+	width: 150%;
+}
+
+/* Máximo: 100% da largura (mesmo que padrão, para casos específicos) */
+.container.max {
+	width: 100%;
+}
+
+/* Responsividade */
+
+/* Para telas com largura máxima de 980px (tablets e dispositivos médios) */
+@media screen and (max-width: 980px) {
+	.container {
+		width: 100% !important; /* Garante que o container ocupe 100% da largura */
+		max-width: 100% !important; /* Remove limite máximo para preencher toda a largura */
+	}
+}
+
+/* Para telas pequenas até 480px (celulares) */
+@media screen and (max-width: 480px) {
+	.container {
+		max-width: calc(100% - 3em); /* Dá uma margem lateral de 1.5em em cada lado */
+	}
+}
+
+
+/* ================= BOX ================= */
+
+/* Caixa com borda arredondada, borda cinza clara, espaçamento interno e margem inferior */
+.box {
+	border-radius: 0.35em; /* Bordas arredondadas */
+	border: solid 2px #efefef; /* Borda cinza clara */
+	margin-bottom: 2em; /* Espaço abaixo da caixa */
+	padding: 1.5em; /* Espaçamento interno */
+}
+
+/* Remove a margem inferior do último filho, do último filho do último filho, até três níveis dentro da caixa */
+.box > :last-child,
+.box > :last-child > :last-child,
+.box > :last-child > :last-child > :last-child {
+	margin-bottom: 0;
+}
+
+/* Variante alternativa da caixa: sem borda, sem arredondamento e sem padding */
+.box.alt {
+	border: 0;
+	border-radius: 0;
+	padding: 0;
+}

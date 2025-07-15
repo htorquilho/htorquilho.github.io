@@ -1,0 +1,103 @@
+/* ================= ÍCONES ================= */
+
+/* Classe base para ícones */
+.icon {
+	text-decoration: none;       /* Remove sublinhado padrão de links */
+	border-bottom: none;         /* Remove borda inferior */
+	position: relative;          /* Para posicionamento relativo dos pseudo-elementos */
+}
+
+/* Pseudo-elemento before para inserir o ícone (usando Font Awesome) */
+.icon:before {
+	-moz-osx-font-smoothing: grayscale;  /* Suaviza fontes no Firefox macOS */
+	-webkit-font-smoothing: antialiased; /* Suaviza fontes no WebKit */
+	display: inline-block;                 /* Comportamento inline, mas aceita largura e altura */
+	font-style: normal;                   /* Fonte normal, não itálica */
+	font-variant: normal;                 /* Normal, sem variantes */
+	text-rendering: auto;                 /* Renderização automática do texto */
+	line-height: 1;                      /* Altura da linha padrão */
+	text-transform: none !important;    /* Sem transformação de texto */
+	font-family: 'Font Awesome 5 Free';  /* Fonte da biblioteca Font Awesome */
+	font-weight: 400;                    /* Peso normal para ícones regulares */
+}
+
+/* Elemento filho label dentro de .icon fica escondido */
+.icon > .label {
+	display: none;
+}
+
+/* Garante que a altura da linha do pseudo-elemento seja herdada */
+.icon:before {
+	line-height: inherit;
+}
+
+/* Ícones sólidos usam peso de fonte 900 (mais negrito) */
+.icon.solid:before {
+	font-weight: 900;
+}
+
+/* Ícones de marcas usam fonte específica de marcas Font Awesome */
+.icon.brands:before {
+	font-family: 'Font Awesome 5 Brands';
+}
+
+/* ================= LISTAS DE ÍCONES ================= */
+
+/* Lista simples de ícones */
+ul.icons {
+	cursor: default;        /* Cursor padrão */
+	list-style: none;       /* Remove marcadores */
+	padding-left: 0;        /* Remove recuo da lista */
+}
+
+/* Itens dentro da lista de ícones */
+ul.icons li {
+	display: inline-block;  /* Coloca os itens lado a lado */
+	padding: 0 1em 0 0;    /* Espaço à direita para separar ícones */
+}
+
+/* Remove o padding do último item para não ter espaço extra */
+ul.icons li:last-child {
+	padding-right: 0;
+}
+
+/* Tamanho maior para os ícones dentro da lista */
+ul.icons li .icon:before {
+	font-size: 1.5em;
+}
+
+/* ================= LISTAS DE ÍCONES COM RÓTULO ================= */
+
+/* Lista sem marcadores para ícones com texto */
+ul.labeled-icons {
+	list-style: none;       /* Remove marcadores */
+	padding: 0;             /* Remove padding */
+}
+
+/* Itens da lista com ícones e texto */
+ul.labeled-icons li {
+	line-height: 1.75em;     /* Altura da linha para melhor espaçamento */
+	margin: 1.5em 0 0 0;     /* Espaçamento superior entre itens */
+	padding-left: 2.25em;    /* Espaço para o ícone à esquerda */
+	position: relative;      /* Para posicionar o texto do ícone */
+}
+
+/* Remove margem superior do primeiro item */
+ul.labeled-icons li:first-child {
+	margin-top: 0;
+}
+
+/* Links dentro dos itens herdam a cor do texto */
+ul.labeled-icons li a {
+	color: inherit;
+}
+
+/* Cabeçalhos dentro dos itens ficam posicionados absolutamente (para ficar na frente do ícone) */
+ul.labeled-icons li h3 {
+	color: #b2b2b2;       /* Cor cinza claro */
+	left: 0;              /* Posiciona à esquerda */
+	position: absolute;   /* Posicionamento absoluto */
+	text-align: center;   /* Centraliza o texto */
+	top: 0;               /* Posiciona no topo */
+	width: 1em;           /* Largura fixa para alinhar com ícone */
+}

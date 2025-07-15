@@ -1,0 +1,84 @@
+/* Reset geral de elementos HTML */
+
+/* Remove margem, padding e borda de praticamente todos os elementos HTML.
+   Também zera o tamanho da fonte e faz os elementos herdarem as fontes do pai.
+   Define alinhamento vertical como baseline (alinhamento padrão de texto).
+   Esse bloco tem o objetivo de "zerar" os estilos padrões dos navegadores, evitando diferenças de renderização entre browsers. */
+html, body, div, span, applet, object,
+iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite,
+code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b,
+u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output, ruby,
+section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%; /* Mantém o tamanho da fonte proporcional ao pai */
+	font: inherit;    /* Herda fonte do elemento pai */
+	vertical-align: baseline; /* Garante alinhamento correto do conteúdo inline */
+}
+
+/* Garante que os elementos HTML5 sejam renderizados como blocos mesmo em navegadores antigos */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+/* Define o espaçamento entre linhas do body como 1 (padrão) */
+body {
+	line-height: 1;
+}
+
+/* Remove os marcadores padrão de listas ordenadas e não ordenadas */
+ol, ul {
+	list-style: none;
+}
+
+/* Remove as aspas automáticas em citações nos elementos blockquote e q */
+blockquote, q {
+	quotes: none;
+}
+
+/* Remove os conteúdos gerados automaticamente para as citações */
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* Remove os espaços entre células de tabela */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Impede o ajuste automático do tamanho do texto em dispositivos iOS e alguns navegadores mobile */
+body {
+	-webkit-text-size-adjust: none;
+}
+
+/* Remove o fundo amarelo e a cor alterada em textos destacados com <mark> */
+mark {
+	background-color: transparent;
+	color: inherit;
+}
+
+/* Remove borda e padding interno dos inputs quando em foco no Firefox */
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+/* Remove a aparência padrão dos inputs, selects e textareas nos navegadores
+   (como setinhas em selects, estilos de botão em inputs, etc.)
+   Isso facilita customizações completas dos formulários */
+input, select, textarea {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+}

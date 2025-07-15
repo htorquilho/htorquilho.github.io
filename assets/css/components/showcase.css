@@ -1,0 +1,25 @@
+/* ================= SHOWCASE | WORK ITEM ================= */
+
+/* Estiliza cada item de trabalho ou projeto */
+.work-item {
+	margin: 0 0 2em 0; /* Espaçamento inferior entre os itens (2em) */
+}
+
+/* Estiliza a imagem dentro do item */
+.work-item .image {
+	margin: 0 0 1.5em 0; /* Espaçamento inferior da imagem (1.5em) para separar do texto */
+}
+
+/* Título (h3) do item de trabalho */
+.work-item h3 {
+	font-size: 1em; /* Tamanho da fonte reduzido para o título do projeto */
+	margin: 0 0 0.5em 0; /* Espaçamento inferior de 0.5em abaixo do título */
+}
+
+/* Parágrafo descritivo do item */
+.work-item p {
+	text-align: justify; /* Texto justificado para melhor apresentação visual */
+	font-size: 0.8em; /* Fonte menor para a descrição */
+	line-height: 1.5em; /* Espaçamento entre linhas */
+	margin: 0; /* Remove margens do parágrafo */
+}

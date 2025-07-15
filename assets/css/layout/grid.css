@@ -1,0 +1,1464 @@
+/* ================= Grid | Row ================= */
+
+/* Container de linha que organiza seus filhos em um flexbox */
+.row {
+    display: flex;            /* Ativa layout flexível */
+    flex-wrap: wrap;          /* Permite quebra de linha */
+    box-sizing: border-box;   /* Inclui padding e bordas na largura total */
+    align-items: stretch;     /* Itens se esticam verticalmente para preencher a linha */
+}
+
+/* Todos os filhos diretos da linha também usam box-sizing border-box */
+.row > * {
+    box-sizing: border-box;
+}
+
+/* Remove margem inferior do último filho dentro de elementos com .gtr-uniform */
+.row.gtr-uniform > * > :last-child {
+    margin-bottom: 0;
+}
+
+/* Controle de alinhamento horizontal da linha */
+.row.aln-left {
+    justify-content: flex-start;  /* Itens alinhados à esquerda */
+}
+
+.row.aln-center {
+    justify-content: center;      /* Itens centralizados horizontalmente */
+}
+
+.row.aln-right {
+    justify-content: flex-end;    /* Itens alinhados à direita */
+}
+
+/* Controle de alinhamento vertical da linha */
+.row.aln-top {
+    align-items: flex-start;      /* Itens alinhados no topo */
+}
+
+.row.aln-middle {
+    align-items: center;          /* Itens centralizados verticalmente */
+}
+
+.row.aln-bottom {
+    align-items: flex-end;        /* Itens alinhados na base */
+}
+
+/* Prioridade de exibição: coloca o item antes dos outros */
+.row > .imp {
+    order: -1;                    /* Move o elemento para o início da linha */
+}
+
+/* Definição da largura das colunas divididas em 12 partes */
+
+/* Cada classe .col-X define a largura do elemento como (X/12)*100% */
+.row > .col-1 {
+    width: 8.33333%;    /* 1/12 da largura */
+}
+.row > .col-2 {
+    width: 16.66667%;   /* 2/12 */
+}
+.row > .col-3 {
+    width: 25%;         /* 3/12 */
+}
+.row > .col-4 {
+    width: 33.33333%;   /* 4/12 */
+}
+.row > .col-5 {
+    width: 41.66667%;   /* 5/12 */
+}
+.row > .col-6 {
+    width: 50%;         /* 6/12 = metade */
+}
+.row > .col-7 {
+    width: 58.33333%;   /* 7/12 */
+}
+.row > .col-8 {
+    width: 66.66667%;   /* 8/12 */
+}
+.row > .col-9 {
+    width: 75%;         /* 9/12 */
+}
+.row > .col-10 {
+    width: 83.33333%;   /* 10/12 */
+}
+.row > .col-11 {
+    width: 91.66667%;   /* 11/12 */
+}
+.row > .col-12 {
+    width: 100%;        /* 12/12 = total da linha */
+}
+
+/* Classes .off-X adicionam uma margem esquerda para deslocar o elemento X/12 da largura */
+
+.row > .off-1 {
+    margin-left: 8.33333%;
+}
+.row > .off-2 {
+    margin-left: 16.66667%;
+}
+.row > .off-3 {
+    margin-left: 25%;
+}
+.row > .off-4 {
+    margin-left: 33.33333%;
+}
+.row > .off-5 {
+    margin-left: 41.66667%;
+}
+.row > .off-6 {
+    margin-left: 50%;
+}
+.row > .off-7 {
+    margin-left: 58.33333%;
+}
+.row > .off-8 {
+    margin-left: 66.66667%;
+}
+.row > .off-9 {
+    margin-left: 75%;
+}
+.row > .off-10 {
+    margin-left: 83.33333%;
+}
+.row > .off-11 {
+    margin-left: 91.66667%;
+}
+.row > .off-12 {
+    margin-left: 100%;
+}
+
+/* Espaçamento entre colunas controlado por classes de gutter (espaçamento interno/margem) */
+
+/* Sem espaçamento entre colunas */
+.row.gtr-0 {
+    margin-top: 0;
+    margin-left: 0em;          /* Sem margem negativa */
+}
+
+.row.gtr-0 > * {
+    padding: 0 0 0 0em;        /* Sem padding à esquerda */
+}
+
+.row.gtr-0.gtr-uniform {
+    margin-top: 0em;
+}
+
+.row.gtr-0.gtr-uniform > * {
+    padding-top: 0em;
+}
+
+/* Espaçamento pequeno: 0.625em */
+.row.gtr-25 {
+    margin-top: 0;
+    margin-left: -0.625em;     /* Margem negativa para compensar padding */
+}
+
+.row.gtr-25 > * {
+    padding: 0 0 0 0.625em;    /* Padding esquerdo para espaçamento */
+}
+
+.row.gtr-25.gtr-uniform {
+    margin-top: -0.625em;
+}
+
+.row.gtr-25.gtr-uniform > * {
+    padding-top: 0.625em;
+}
+
+/* Espaçamento médio: 1.25em */
+.row.gtr-50 {
+    margin-top: 0;
+    margin-left: -1.25em;
+}
+
+.row.gtr-50 > * {
+    padding: 0 0 0 1.25em;
+}
+
+.row.gtr-50.gtr-uniform {
+    margin-top: -1.25em;
+}
+
+.row.gtr-50.gtr-uniform > * {
+    padding-top: 1.25em;
+}
+
+/* Espaçamento padrão (maior): 2.5em */
+.row {
+    margin-top: 0;
+    margin-left: -2.5em;
+}
+
+.row > * {
+    padding: 0 0 0 2.5em;
+}
+
+.row.gtr-uniform {
+    margin-top: -2.5em;
+}
+
+.row.gtr-uniform > * {
+    padding-top: 2.5em;
+}
+
+/* Espaçamento maior: 3.75em */
+.row.gtr-150 {
+    margin-top: 0;
+    margin-left: -3.75em;
+}
+
+.row.gtr-150 > * {
+    padding: 0 0 0 3.75em;
+}
+
+.row.gtr-150.gtr-uniform {
+    margin-top: -3.75em;
+}
+
+.row.gtr-150.gtr-uniform > * {
+    padding-top: 3.75em;
+}
+
+/* Espaçamento máximo: 5em */
+.row.gtr-200 {
+    margin-top: 0;
+    margin-left: -5em;
+}
+
+.row.gtr-200 > * {
+    padding: 0 0 0 5em;
+}
+
+.row.gtr-200.gtr-uniform {
+    margin-top: -5em;
+}
+
+.row.gtr-200.gtr-uniform > * {
+    padding-top: 5em;
+}
+
+
+	@media screen and (max-width: 1800px) {
+
+		/* Container de linha com layout flexível para dispor colunas */
+		.row {
+			display: flex;            /* Ativa flexbox para layout */
+			flex-wrap: wrap;          /* Permite quebra de linha */
+			box-sizing: border-box;   /* Inclui padding e bordas no cálculo de largura */
+			align-items: stretch;     /* Estica os itens para a mesma altura */
+		}
+
+		/* Aplica box-sizing a todos os filhos diretos */
+		.row > * {
+			box-sizing: border-box;
+		}
+
+		/* Remove margem inferior do último elemento dentro dos filhos quando há .gtr-uniform */
+		.row.gtr-uniform > * > :last-child {
+			margin-bottom: 0;
+		}
+
+		/* Alinhamento horizontal flexível */
+		.row.aln-left {
+			justify-content: flex-start;  /* Itens alinhados à esquerda */
+		}
+
+		.row.aln-center {
+			justify-content: center;      /* Itens centralizados horizontalmente */
+		}
+
+		.row.aln-right {
+			justify-content: flex-end;    /* Itens alinhados à direita */
+		}
+
+		/* Alinhamento vertical flexível */
+		.row.aln-top {
+			align-items: flex-start;      /* Itens alinhados ao topo */
+		}
+
+		.row.aln-middle {
+			align-items: center;          /* Itens alinhados ao centro vertical */
+		}
+
+		.row.aln-bottom {
+			align-items: flex-end;        /* Itens alinhados à base */
+		}
+
+		/* Classe para forçar a exibição antecipada do item na ordem do flexbox */
+		.row > .imp-xlarge {
+			order: -1;                    /* Move o elemento para o início */
+		}
+
+		/* Definição das larguras das colunas (frações da linha dividida em 12 partes) */
+
+		.row > .col-1-xlarge {
+			width: 8.33333%;              /* 1/12 da largura */
+		}
+
+		.row > .col-2-xlarge {
+			width: 16.66667%;             /* 2/12 da largura */
+		}
+
+		.row > .col-3-xlarge {
+			width: 25%;                   /* 3/12 */
+		}
+
+		.row > .col-4-xlarge {
+			width: 33.33333%;             /* 4/12 */
+		}
+
+		.row > .col-5-xlarge {
+			width: 41.66667%;             /* 5/12 */
+		}
+
+		.row > .col-6-xlarge {
+			width: 50%;                   /* 6/12 = metade da largura */
+		}
+
+		.row > .col-7-xlarge {
+			width: 58.33333%;             /* 7/12 */
+		}
+
+		.row > .col-8-xlarge {
+			width: 66.66667%;             /* 8/12 */
+		}
+
+		.row > .col-9-xlarge {
+			width: 75%;                   /* 9/12 */
+		}
+
+		.row > .col-10-xlarge {
+			width: 83.33333%;             /* 10/12 */
+		}
+
+		.row > .col-11-xlarge {
+			width: 91.66667%;             /* 11/12 */
+		}
+
+		.row > .col-12-xlarge {
+			width: 100%;                  /* 12/12 = largura total */
+		}
+
+		/* Classes para deslocamento horizontal (margem à esquerda) em frações da largura */
+
+		.row > .off-1-xlarge {
+			margin-left: 8.33333%;
+		}
+
+		.row > .off-2-xlarge {
+			margin-left: 16.66667%;
+		}
+
+		.row > .off-3-xlarge {
+			margin-left: 25%;
+		}
+
+		.row > .off-4-xlarge {
+			margin-left: 33.33333%;
+		}
+
+		.row > .off-5-xlarge {
+			margin-left: 41.66667%;
+		}
+
+		.row > .off-6-xlarge {
+			margin-left: 50%;
+		}
+
+		.row > .off-7-xlarge {
+			margin-left: 58.33333%;
+		}
+
+		.row > .off-8-xlarge {
+			margin-left: 66.66667%;
+		}
+
+		.row > .off-9-xlarge {
+			margin-left: 75%;
+		}
+
+		.row > .off-10-xlarge {
+			margin-left: 83.33333%;
+		}
+
+		.row > .off-11-xlarge {
+			margin-left: 91.66667%;
+		}
+
+		.row > .off-12-xlarge {
+			margin-left: 100%;
+		}
+
+    /* Configurações de espaçamento interno (gutter) horizontal e vertical entre colunas */
+
+    /* Sem espaçamento */
+    .row.gtr-0 {
+        margin-top: 0;
+        margin-left: 0em;         /* Sem margem negativa para compensar padding */
+    }
+
+    .row.gtr-0 > * {
+        padding: 0 0 0 0em;       /* Sem padding esquerdo */
+    }
+
+    .row.gtr-0.gtr-uniform {
+        margin-top: 0em;
+    }
+
+    .row.gtr-0.gtr-uniform > * {
+        padding-top: 0em;
+    }
+
+    /* Espaçamento pequeno: 0.625em */
+    .row.gtr-25 {
+        margin-top: 0;
+        margin-left: -0.625em;    /* Margem negativa para compensar padding */
+    }
+
+    .row.gtr-25 > * {
+        padding: 0 0 0 0.625em;   /* Padding à esquerda para espaçamento */
+    }
+
+    .row.gtr-25.gtr-uniform {
+        margin-top: -0.625em;
+    }
+
+    .row.gtr-25.gtr-uniform > * {
+        padding-top: 0.625em;
+    }
+
+    /* Espaçamento médio: 1.25em */
+    .row.gtr-50 {
+        margin-top: 0;
+        margin-left: -1.25em;
+    }
+
+    .row.gtr-50 > * {
+        padding: 0 0 0 1.25em;
+    }
+
+    .row.gtr-50.gtr-uniform {
+        margin-top: -1.25em;
+    }
+
+    .row.gtr-50.gtr-uniform > * {
+        padding-top: 1.25em;
+    }
+
+    /* Espaçamento padrão (maior): 2.5em */
+    .row {
+        margin-top: 0;
+        margin-left: -2.5em;
+    }
+
+    .row > * {
+        padding: 0 0 0 2.5em;
+    }
+
+    .row.gtr-uniform {
+        margin-top: -2.5em;
+    }
+
+    .row.gtr-uniform > * {
+        padding-top: 2.5em;
+    }
+
+    /* Espaçamento grande: 3.75em */
+    .row.gtr-150 {
+        margin-top: 0;
+        margin-left: -3.75em;
+    }
+
+    .row.gtr-150 > * {
+        padding: 0 0 0 3.75em;
+    }
+
+    .row.gtr-150.gtr-uniform {
+        margin-top: -3.75em;
+    }
+
+    .row.gtr-150.gtr-uniform > * {
+        padding-top: 3.75em;
+    }
+
+    /* Espaçamento máximo: 5em */
+    .row.gtr-200 {
+        margin-top: 0;
+        margin-left: -5em;
+    }
+
+    .row.gtr-200 > * {
+        padding: 0 0 0 5em;
+    }
+
+    .row.gtr-200.gtr-uniform {
+        margin-top: -5em;
+    }
+
+    .row.gtr-200.gtr-uniform > * {
+        padding-top: 5em;
+    }
+
+}
+
+		@media screen and (max-width: 1280px) {
+
+			/* Container de linha com flexbox para layout responsivo */
+			.row {
+				display: flex;            /* Ativa o flexbox */
+				flex-wrap: wrap;          /* Permite que os elementos quebrem para a próxima linha */
+				box-sizing: border-box;   /* Inclui padding e bordas na largura total */
+				align-items: stretch;     /* Estica itens para terem mesma altura */
+			}
+
+			/* Aplica box-sizing aos filhos diretos da linha */
+			.row > * {
+				box-sizing: border-box;
+			}
+
+			/* Remove margem inferior do último elemento dentro dos filhos, se a linha tem a classe gtr-uniform */
+			.row.gtr-uniform > * > :last-child {
+				margin-bottom: 0;
+			}
+
+			/* Alinhamento horizontal flexível */
+			.row.aln-left {
+				justify-content: flex-start;  /* Itens alinhados à esquerda */
+			}
+
+			.row.aln-center {
+				justify-content: center;      /* Itens centralizados horizontalmente */
+			}
+
+			.row.aln-right {
+				justify-content: flex-end;    /* Itens alinhados à direita */
+			}
+
+			/* Alinhamento vertical flexível */
+			.row.aln-top {
+				align-items: flex-start;      /* Alinha itens ao topo */
+			}
+
+			.row.aln-middle {
+				align-items: center;          /* Alinha itens ao centro vertical */
+			}
+
+			.row.aln-bottom {
+				align-items: flex-end;        /* Alinha itens à base */
+			}
+
+			/* Classe para priorizar um item na ordem do flexbox */
+			.row > .imp-large {
+				order: -1;                    /* Faz o elemento aparecer antes dos demais */
+			}
+
+			/* Definição das larguras das colunas em frações da largura total (dividida em 12 partes) */
+			.row > .col-1-large { width: 8.33333%; }
+			.row > .col-2-large { width: 16.66667%; }
+			.row > .col-3-large { width: 25%; }
+			.row > .col-4-large { width: 33.33333%; }
+			.row > .col-5-large { width: 41.66667%; }
+			.row > .col-6-large { width: 50%; }
+			.row > .col-7-large { width: 58.33333%; }
+			.row > .col-8-large { width: 66.66667%; }
+			.row > .col-9-large { width: 75%; }
+			.row > .col-10-large { width: 83.33333%; }
+			.row > .col-11-large { width: 91.66667%; }
+			.row > .col-12-large { width: 100%; }
+
+			/* Deslocamento horizontal (margem esquerda) em frações da largura total */
+			.row > .off-1-large { margin-left: 8.33333%; }
+			.row > .off-2-large { margin-left: 16.66667%; }
+			.row > .off-3-large { margin-left: 25%; }
+			.row > .off-4-large { margin-left: 33.33333%; }
+			.row > .off-5-large { margin-left: 41.66667%; }
+			.row > .off-6-large { margin-left: 50%; }
+			.row > .off-7-large { margin-left: 58.33333%; }
+			.row > .off-8-large { margin-left: 66.66667%; }
+			.row > .off-9-large { margin-left: 75%; }
+			.row > .off-10-large { margin-left: 83.33333%; }
+			.row > .off-11-large { margin-left: 91.66667%; }
+			.row > .off-12-large { margin-left: 100%; }
+
+			/* Controle do espaçamento entre colunas (gutter) com margens negativas para compensar paddings */
+
+			/* Sem espaçamento */
+			.row.gtr-0 {
+				margin-top: 0;
+				margin-left: 0em;
+			}
+			.row.gtr-0 > * {
+				padding: 0 0 0 0em;
+			}
+			.row.gtr-0.gtr-uniform {
+				margin-top: 0em;
+			}
+			.row.gtr-0.gtr-uniform > * {
+				padding-top: 0em;
+			}
+
+			/* Espaçamento pequeno: 0.5em */
+			.row.gtr-25 {
+				margin-top: 0;
+				margin-left: -0.5em;
+			}
+			.row.gtr-25 > * {
+				padding: 0 0 0 0.5em;
+			}
+			.row.gtr-25.gtr-uniform {
+				margin-top: -0.5em;
+			}
+			.row.gtr-25.gtr-uniform > * {
+				padding-top: 0.5em;
+			}
+
+			/* Espaçamento médio: 1em */
+			.row.gtr-50 {
+				margin-top: 0;
+				margin-left: -1em;
+			}
+			.row.gtr-50 > * {
+				padding: 0 0 0 1em;
+			}
+			.row.gtr-50.gtr-uniform {
+				margin-top: -1em;
+			}
+			.row.gtr-50.gtr-uniform > * {
+				padding-top: 1em;
+			}
+
+			/* Espaçamento padrão: 2em */
+			.row {
+				margin-top: 0;
+				margin-left: -2em;
+			}
+			.row > * {
+				padding: 0 0 0 2em;
+			}
+			.row.gtr-uniform {
+				margin-top: -2em;
+			}
+			.row.gtr-uniform > * {
+				padding-top: 2em;
+			}
+
+			/* Espaçamento maior: 3em */
+			.row.gtr-150 {
+				margin-top: 0;
+				margin-left: -3em;
+			}
+			.row.gtr-150 > * {
+				padding: 0 0 0 3em;
+			}
+			.row.gtr-150.gtr-uniform {
+				margin-top: -3em;
+			}
+			.row.gtr-150.gtr-uniform > * {
+				padding-top: 3em;
+			}
+
+			/* Espaçamento máximo aqui: 4em */
+			.row.gtr-200 {
+				margin-top: 0;
+				margin-left: -4em;
+			}
+			.row.gtr-200 > * {
+				padding: 0 0 0 4em;
+			}
+			.row.gtr-200.gtr-uniform {
+				margin-top: -4em;
+			}
+			.row.gtr-200.gtr-uniform > * {
+				padding-top: 4em;
+			}
+		}
+
+/* ================= MEDIA QUERY PARA TELAS ATÉ 980px ================= */
+
+
+		@media screen and (max-width: 980px) {
+
+			/* Container flexível para linhas (.row) */
+			.row {
+				display: flex;            /* Ativa o flexbox para layout flexível */
+				flex-wrap: wrap;          /* Permite quebra de linha para itens que não cabem */
+				box-sizing: border-box;   /* Inclui padding e bordas no cálculo da largura */
+				align-items: stretch;     /* Estica os itens para preencher a altura da linha */
+			}
+
+			/* Todos os filhos diretos de .row também usam box-sizing border-box */
+			.row > * {
+				box-sizing: border-box;
+			}
+
+			/* Remove margem inferior do último filho de elementos dentro de .row.gtr-uniform */
+			.row.gtr-uniform > * > :last-child {
+				margin-bottom: 0;
+			}
+
+			/* Alinhamento horizontal dos itens na linha */
+			.row.aln-left {
+				justify-content: flex-start;  /* Itens alinhados à esquerda */
+			}
+
+			.row.aln-center {
+				justify-content: center;      /* Itens centralizados horizontalmente */
+			}
+
+			.row.aln-right {
+				justify-content: flex-end;    /* Itens alinhados à direita */
+			}
+
+			/* Alinhamento vertical dos itens na linha */
+			.row.aln-top {
+				align-items: flex-start;      /* Alinha itens ao topo */
+			}
+
+			.row.aln-middle {
+				align-items: center;          /* Alinha itens verticalmente ao centro */
+			}
+
+			.row.aln-bottom {
+				align-items: flex-end;        /* Alinha itens ao fundo */
+			}
+
+			/* Prioridade para exibir alguns itens primeiro em telas médias */
+			.row > .imp-medium {
+				order: -1;                    /* Move o item para o início da ordem visual */
+			}
+
+			/* Definição de larguras percentuais para colunas em telas médias */
+			.row > .col-1-medium {
+				width: 8.33333%;              /* 1/12 da largura total */
+			}
+
+			.row > .off-1-medium {
+				margin-left: 8.33333%;        /* Offset (margem esquerda) equivalente a 1/12 */
+			}
+
+			.row > .col-2-medium {
+				width: 16.66667%;             /* 2/12 da largura */
+			}
+
+			.row > .off-2-medium {
+				margin-left: 16.66667%;       /* Offset 2/12 */
+			}
+
+			.row > .col-3-medium {
+				width: 25%;                   /* 3/12 da largura */
+			}
+
+			.row > .off-3-medium {
+				margin-left: 25%;             /* Offset 3/12 */
+			}
+
+			.row > .col-4-medium {
+				width: 33.33333%;             /* 4/12 da largura */
+			}
+
+			.row > .off-4-medium {
+				margin-left: 33.33333%;       /* Offset 4/12 */
+			}
+
+			.row > .col-5-medium {
+				width: 41.66667%;             /* 5/12 da largura */
+			}
+
+			.row > .off-5-medium {
+				margin-left: 41.66667%;       /* Offset 5/12 */
+			}
+
+			.row > .col-6-medium {
+				width: 50%;                   /* 6/12, metade da largura */
+			}
+
+			.row > .off-6-medium {
+				margin-left: 50%;             /* Offset metade */
+			}
+
+			.row > .col-7-medium {
+				width: 58.33333%;             /* 7/12 da largura */
+			}
+
+			.row > .off-7-medium {
+				margin-left: 58.33333%;       /* Offset 7/12 */
+			}
+
+			.row > .col-8-medium {
+				width: 66.66667%;             /* 8/12 da largura */
+			}
+
+			.row > .off-8-medium {
+				margin-left: 66.66667%;       /* Offset 8/12 */
+			}
+
+			.row > .col-9-medium {
+				width: 75%;                   /* 9/12 da largura */
+			}
+
+			.row > .off-9-medium {
+				margin-left: 75%;             /* Offset 9/12 */
+			}
+
+			.row > .col-10-medium {
+				width: 83.33333%;             /* 10/12 da largura */
+			}
+
+			.row > .off-10-medium {
+				margin-left: 83.33333%;       /* Offset 10/12 */
+			}
+
+			.row > .col-11-medium {
+				width: 91.66667%;             /* 11/12 da largura */
+			}
+
+			.row > .off-11-medium {
+				margin-left: 91.66667%;       /* Offset 11/12 */
+			}
+
+			.row > .col-12-medium {
+				width: 100%;                  /* 12/12, ocupa toda a largura */
+			}
+
+			.row > .off-12-medium {
+				margin-left: 100%;            /* Offset total */
+			}
+
+			/* Ajustes de margens e espaçamentos para diferentes espaçamentos entre colunas */
+
+			/* Sem espaçamento */
+			.row.gtr-0 {
+				margin-top: 0;
+				margin-left: 0em;
+			}
+
+				.row.gtr-0 > * {
+					padding: 0 0 0 0em;
+				}
+
+				.row.gtr-0.gtr-uniform {
+					margin-top: 0em;
+				}
+
+					.row.gtr-0.gtr-uniform > * {
+						padding-top: 0em;
+					}
+
+			/* Espaçamento pequeno (0.5em) */
+			.row.gtr-25 {
+				margin-top: 0;
+				margin-left: -0.5em;
+			}
+
+				.row.gtr-25 > * {
+					padding: 0 0 0 0.5em;
+				}
+
+				.row.gtr-25.gtr-uniform {
+					margin-top: -0.5em;
+				}
+
+					.row.gtr-25.gtr-uniform > * {
+						padding-top: 0.5em;
+					}
+
+			/* Espaçamento médio (1em) */
+			.row.gtr-50 {
+				margin-top: 0;
+				margin-left: -1em;
+			}
+
+				.row.gtr-50 > * {
+					padding: 0 0 0 1em;
+				}
+
+				.row.gtr-50.gtr-uniform {
+					margin-top: -1em;
+				}
+
+					.row.gtr-50.gtr-uniform > * {
+						padding-top: 1em;
+					}
+
+			/* Espaçamento padrão (2em) */
+			.row {
+				margin-top: 0;
+				margin-left: -2em;
+			}
+
+				.row > * {
+					padding: 0 0 0 2em;
+				}
+
+				.row.gtr-uniform {
+					margin-top: -2em;
+				}
+
+					.row.gtr-uniform > * {
+						padding-top: 2em;
+					}
+
+			/* Espaçamento maior (3em) */
+			.row.gtr-150 {
+				margin-top: 0;
+				margin-left: -3em;
+			}
+
+				.row.gtr-150 > * {
+					padding: 0 0 0 3em;
+				}
+
+				.row.gtr-150.gtr-uniform {
+					margin-top: -3em;
+				}
+
+					.row.gtr-150.gtr-uniform > * {
+						padding-top: 3em;
+					}
+
+			/* Espaçamento máximo (4em) */
+			.row.gtr-200 {
+				margin-top: 0;
+				margin-left: -4em;
+			}
+
+				.row.gtr-200 > * {
+					padding: 0 0 0 4em;
+				}
+
+				.row.gtr-200.gtr-uniform {
+					margin-top: -4em;
+				}
+
+					.row.gtr-200.gtr-uniform > * {
+						padding-top: 4em;
+					}
+
+		}
+
+/* ================= MEDIA QUERY PARA TELAS ATÉ 736px ================= */
+
+
+		@media screen and (max-width: 736px) {
+
+			/* Container flexível para linhas */
+			.row {
+				display: flex;            /* Ativa flexbox para layout flexível */
+				flex-wrap: wrap;          /* Permite que os itens quebrem a linha e se ajustem */
+				box-sizing: border-box;   /* Inclui padding e bordas no tamanho total */
+				align-items: stretch;     /* Estica os itens para a mesma altura da linha */
+			}
+
+			/* Todos os filhos diretos de .row também usam box-sizing border-box */
+			.row > * {
+				box-sizing: border-box;
+			}
+
+			/* Remove margem inferior do último filho de elementos dentro de .row.gtr-uniform */
+			.row.gtr-uniform > * > :last-child {
+				margin-bottom: 0;
+			}
+
+			/* Alinhamento horizontal dos itens na linha */
+			.row.aln-left {
+				justify-content: flex-start;  /* Itens alinhados à esquerda */
+			}
+
+			.row.aln-center {
+				justify-content: center;      /* Itens centralizados */
+			}
+
+			.row.aln-right {
+				justify-content: flex-end;    /* Itens alinhados à direita */
+			}
+
+			/* Alinhamento vertical dos itens na linha */
+			.row.aln-top {
+				align-items: flex-start;      /* Itens alinhados ao topo */
+			}
+
+			.row.aln-middle {
+				align-items: center;          /* Itens alinhados verticalmente no centro */
+			}
+
+			.row.aln-bottom {
+				align-items: flex-end;        /* Itens alinhados ao fundo */
+			}
+
+			/* Define ordem para elementos prioritários em telas pequenas */
+			.row > .imp-small {
+				order: -1;                    /* Move o item para aparecer primeiro */
+			}
+
+			/* Largura das colunas com base em frações para telas pequenas */
+			.row > .col-1-small {
+				width: 8.33333%;              /* 1/12 da largura total */
+			}
+
+			.row > .off-1-small {
+				margin-left: 8.33333%;        /* Offset (margem esquerda) de 1/12 */
+			}
+
+			.row > .col-2-small {
+				width: 16.66667%;             /* 2/12 da largura */
+			}
+
+			.row > .off-2-small {
+				margin-left: 16.66667%;       /* Offset de 2/12 */
+			}
+
+			.row > .col-3-small {
+				width: 25%;                   /* 3/12 da largura */
+			}
+
+			.row > .off-3-small {
+				margin-left: 25%;             /* Offset de 3/12 */
+			}
+
+			.row > .col-4-small {
+				width: 33.33333%;             /* 4/12 da largura */
+			}
+
+			.row > .off-4-small {
+				margin-left: 33.33333%;       /* Offset de 4/12 */
+			}
+
+			.row > .col-5-small {
+				width: 41.66667%;             /* 5/12 da largura */
+			}
+
+			.row > .off-5-small {
+				margin-left: 41.66667%;       /* Offset de 5/12 */
+			}
+
+			.row > .col-6-small {
+				width: 50%;                   /* 6/12 da largura (metade) */
+			}
+
+			.row > .off-6-small {
+				margin-left: 50%;             /* Offset de metade */
+			}
+
+			.row > .col-7-small {
+				width: 58.33333%;             /* 7/12 da largura */
+			}
+
+			.row > .off-7-small {
+				margin-left: 58.33333%;       /* Offset de 7/12 */
+			}
+
+			.row > .col-8-small {
+				width: 66.66667%;             /* 8/12 da largura */
+			}
+
+			.row > .off-8-small {
+				margin-left: 66.66667%;       /* Offset de 8/12 */
+			}
+
+			.row > .col-9-small {
+				width: 75%;                   /* 9/12 da largura */
+			}
+
+			.row > .off-9-small {
+				margin-left: 75%;             /* Offset de 9/12 */
+			}
+
+			.row > .col-10-small {
+				width: 83.33333%;             /* 10/12 da largura */
+			}
+
+			.row > .off-10-small {
+				margin-left: 83.33333%;       /* Offset de 10/12 */
+			}
+
+			.row > .col-11-small {
+				width: 91.66667%;             /* 11/12 da largura */
+			}
+
+			.row > .off-11-small {
+				margin-left: 91.66667%;       /* Offset de 11/12 */
+			}
+
+			.row > .col-12-small {
+				width: 100%;                  /* 12/12 (toda a largura) */
+			}
+
+			.row > .off-12-small {
+				margin-left: 100%;            /* Offset total */
+			}
+
+			/* Controle de margens e espaçamento entre os elementos */
+
+			/* Sem espaçamento */
+			.row.gtr-0 {
+				margin-top: 0;
+				margin-left: 0em;
+			}
+
+				.row.gtr-0 > * {
+					padding: 0 0 0 0em;
+				}
+
+				.row.gtr-0.gtr-uniform {
+					margin-top: 0em;
+				}
+
+					.row.gtr-0.gtr-uniform > * {
+						padding-top: 0em;
+					}
+
+			/* Espaçamento pequeno (0.375em) */
+			.row.gtr-25 {
+				margin-top: 0;
+				margin-left: -0.375em;
+			}
+
+				.row.gtr-25 > * {
+					padding: 0 0 0 0.375em;
+				}
+
+				.row.gtr-25.gtr-uniform {
+					margin-top: -0.375em;
+				}
+
+					.row.gtr-25.gtr-uniform > * {
+						padding-top: 0.375em;
+					}
+
+			/* Espaçamento médio (0.75em) */
+			.row.gtr-50 {
+				margin-top: 0;
+				margin-left: -0.75em;
+			}
+
+				.row.gtr-50 > * {
+					padding: 0 0 0 0.75em;
+				}
+
+				.row.gtr-50.gtr-uniform {
+					margin-top: -0.75em;
+				}
+
+					.row.gtr-50.gtr-uniform > * {
+						padding-top: 0.75em;
+					}
+
+			/* Espaçamento padrão (1.5em) */
+			.row {
+				margin-top: 0;
+				margin-left: -1.5em;
+			}
+
+				.row > * {
+					padding: 0 0 0 1.5em;
+				}
+
+				.row.gtr-uniform {
+					margin-top: -1.5em;
+				}
+
+					.row.gtr-uniform > * {
+						padding-top: 1.5em;
+					}
+
+			/* Espaçamento maior (2.25em) */
+			.row.gtr-150 {
+				margin-top: 0;
+				margin-left: -2.25em;
+			}
+
+				.row.gtr-150 > * {
+					padding: 0 0 0 2.25em;
+				}
+
+				.row.gtr-150.gtr-uniform {
+					margin-top: -2.25em;
+				}
+
+					.row.gtr-150.gtr-uniform > * {
+						padding-top: 2.25em;
+					}
+
+			/* Espaçamento máximo (3em) */
+			.row.gtr-200 {
+				margin-top: 0;
+				margin-left: -3em;
+			}
+
+				.row.gtr-200 > * {
+					padding: 0 0 0 3em;
+				}
+
+				.row.gtr-200.gtr-uniform {
+					margin-top: -3em;
+				}
+
+					.row.gtr-200.gtr-uniform > * {
+						padding-top: 3em;
+					}
+
+		}
+
+/* ================= MEDIA QUERY PARA TELAS ATÉ 480px (DISPOSITIVOS MÓVEIS) ================= */
+
+
+		@media screen and (max-width: 480px) {
+
+			/* Container flexível para linhas */
+			.row {
+				display: flex;            /* Ativa flexbox para layout flexível */
+				flex-wrap: wrap;          /* Permite que itens quebrem linha e se ajustem */
+				box-sizing: border-box;   /* Inclui padding e bordas no tamanho total */
+				align-items: stretch;     /* Estica os itens na altura da linha */
+			}
+
+			/* Todos os filhos diretos de .row também usam box-sizing border-box */
+			.row > * {
+				box-sizing: border-box;
+			}
+
+			/* Remove margem inferior do último filho de elementos dentro de .row.gtr-uniform */
+			.row.gtr-uniform > * > :last-child {
+				margin-bottom: 0;
+			}
+
+			/* Alinhamento horizontal das linhas */
+			.row.aln-left {
+				justify-content: flex-start;  /* Itens alinhados à esquerda */
+			}
+
+			.row.aln-center {
+				justify-content: center;      /* Itens centralizados */
+			}
+
+			.row.aln-right {
+				justify-content: flex-end;    /* Itens alinhados à direita */
+			}
+
+			/* Alinhamento vertical das linhas */
+			.row.aln-top {
+				align-items: flex-start;      /* Alinha itens no topo */
+			}
+
+			.row.aln-middle {
+				align-items: center;          /* Alinha itens no centro vertical */
+			}
+
+			.row.aln-bottom {
+				align-items: flex-end;        /* Alinha itens na parte inferior */
+			}
+
+			/* Ordem dos elementos para pequenos dispositivos */
+			.row > .imp-xsmall {
+				order: -1;                    /* Move este elemento para o início */
+			}
+
+			/* Larguras das colunas com base em frações para dispositivos pequenos */
+			.row > .col-1-xsmall {
+				width: 8.33333%;              /* 1/12 da largura */
+			}
+
+			.row > .off-1-xsmall {
+				margin-left: 8.33333%;        /* Offset de 1/12 */
+			}
+
+			.row > .col-2-xsmall {
+				width: 16.66667%;             /* 2/12 da largura */
+			}
+
+			.row > .off-2-xsmall {
+				margin-left: 16.66667%;       /* Offset de 2/12 */
+			}
+
+			.row > .col-3-xsmall {
+				width: 25%;                   /* 3/12 da largura */
+			}
+
+			.row > .off-3-xsmall {
+				margin-left: 25%;             /* Offset de 3/12 */
+			}
+
+			.row > .col-4-xsmall {
+				width: 33.33333%;             /* 4/12 da largura */
+			}
+
+			.row > .off-4-xsmall {
+				margin-left: 33.33333%;       /* Offset de 4/12 */
+			}
+
+			.row > .col-5-xsmall {
+				width: 41.66667%;             /* 5/12 da largura */
+			}
+
+			.row > .off-5-xsmall {
+				margin-left: 41.66667%;       /* Offset de 5/12 */
+			}
+
+			.row > .col-6-xsmall {
+				width: 50%;                   /* 6/12 da largura (metade) */
+			}
+
+			.row > .off-6-xsmall {
+				margin-left: 50%;             /* Offset de metade */
+			}
+
+			.row > .col-7-xsmall {
+				width: 58.33333%;             /* 7/12 da largura */
+			}
+
+			.row > .off-7-xsmall {
+				margin-left: 58.33333%;       /* Offset de 7/12 */
+			}
+
+			.row > .col-8-xsmall {
+				width: 66.66667%;             /* 8/12 da largura */
+			}
+
+			.row > .off-8-xsmall {
+				margin-left: 66.66667%;       /* Offset de 8/12 */
+			}
+
+			.row > .col-9-xsmall {
+				width: 75%;                   /* 9/12 da largura */
+			}
+
+			.row > .off-9-xsmall {
+				margin-left: 75%;             /* Offset de 9/12 */
+			}
+
+			.row > .col-10-xsmall {
+				width: 83.33333%;             /* 10/12 da largura */
+			}
+
+			.row > .off-10-xsmall {
+				margin-left: 83.33333%;       /* Offset de 10/12 */
+			}
+
+			.row > .col-11-xsmall {
+				width: 91.66667%;             /* 11/12 da largura */
+			}
+
+			.row > .off-11-xsmall {
+				margin-left: 91.66667%;       /* Offset de 11/12 */
+			}
+
+			.row > .col-12-xsmall {
+				width: 100%;                  /* 12/12 largura total */
+			}
+
+			.row > .off-12-xsmall {
+				margin-left: 100%;            /* Offset total */
+			}
+
+			/* Controle de margens e espaçamento para diferentes espaçamentos nas linhas */
+
+			/* Linha sem espaçamento */
+			.row.gtr-0 {
+				margin-top: 0;
+				margin-left: 0em;
+			}
+
+				.row.gtr-0 > * {
+					padding: 0 0 0 0em;
+				}
+
+				.row.gtr-0.gtr-uniform {
+					margin-top: 0em;
+				}
+
+					.row.gtr-0.gtr-uniform > * {
+						padding-top: 0em;
+					}
+
+			/* Linha com espaçamento pequeno (0.375em) */
+			.row.gtr-25 {
+				margin-top: 0;
+				margin-left: -0.375em;
+			}
+
+				.row.gtr-25 > * {
+					padding: 0 0 0 0.375em;
+				}
+
+				.row.gtr-25.gtr-uniform {
+					margin-top: -0.375em;
+				}
+
+					.row.gtr-25.gtr-uniform > * {
+						padding-top: 0.375em;
+					}
+
+			/* Linha com espaçamento médio (0.75em) */
+			.row.gtr-50 {
+				margin-top: 0;
+				margin-left: -0.75em;
+			}
+
+				.row.gtr-50 > * {
+					padding: 0 0 0 0.75em;
+				}
+
+				.row.gtr-50.gtr-uniform {
+					margin-top: -0.75em;
+				}
+
+					.row.gtr-50.gtr-uniform > * {
+						padding-top: 0.75em;
+					}
+
+			/* Linha padrão com espaçamento maior (1.5em) */
+			.row {
+				margin-top: 0;
+				margin-left: -1.5em;
+			}
+
+				.row > * {
+					padding: 0 0 0 1.5em;
+				}
+
+				.row.gtr-uniform {
+					margin-top: -1.5em;
+				}
+
+					.row.gtr-uniform > * {
+						padding-top: 1.5em;
+					}
+
+			/* Linha com espaçamento ainda maior (2.25em) */
+			.row.gtr-150 {
+				margin-top: 0;
+				margin-left: -2.25em;
+			}
+
+				.row.gtr-150 > * {
+					padding: 0 0 0 2.25em;
+				}
+
+				.row.gtr-150.gtr-uniform {
+					margin-top: -2.25em;
+				}
+
+					.row.gtr-150.gtr-uniform > * {
+						padding-top: 2.25em;
+					}
+
+			/* Linha com espaçamento máximo (3em) */
+			.row.gtr-200 {
+				margin-top: 0;
+				margin-left: -3em;
+			}
+
+				.row.gtr-200 > * {
+					padding: 0 0 0 3em;
+				}
+
+				.row.gtr-200.gtr-uniform {
+					margin-top: -3em;
+				}
+
+					.row.gtr-200.gtr-uniform > * {
+						padding-top: 3em;
+					}
+
+		}

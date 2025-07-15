@@ -1,0 +1,83 @@
+/* ================= TABELA ================= */
+
+/* Wrapper da tabela: adiciona rolagem horizontal suave em dispositivos móveis */
+.table-wrapper {
+	-webkit-overflow-scrolling: touch; /* Suaviza o scroll no iOS */
+	overflow-x: auto; /* Permite rolagem horizontal caso a tabela ultrapasse o tamanho da tela */
+}
+
+/* Estilização padrão da tabela */
+table {
+	margin: 0 0 2em 0; /* Espaço inferior */
+	width: 100%; /* Faz a tabela ocupar toda a largura do container */
+}
+
+/* Linhas do tbody com bordas superior e inferior */
+table tbody tr {
+	border: solid 1px #efefef;
+	border-left: 0;  /* Remove borda lateral esquerda */
+	border-right: 0; /* Remove borda lateral direita */
+}
+
+/* Zebra striping: cor de fundo alternada para as linhas ímpares */
+table tbody tr:nth-child(2n + 1) {
+	background-color: #f7f7f7;
+}
+
+/* Células da tabela (td) com padding interno */
+table td {
+	padding: 0.75em 0.75em;
+}
+
+/* Cabeçalho da tabela (th) com estilo diferenciado */
+table th {
+	color: #787878; /* Cor do texto */
+	font-size: 0.9em; /* Fonte menor */
+	font-weight: 400; /* Peso da fonte */
+	padding: 0 0.75em 0.75em 0.75em; /* Padding interno */
+	text-align: left; /* Alinhamento do texto */
+}
+
+/* Linha inferior do cabeçalho (thead) */
+table thead {
+	border-bottom: solid 2px #efefef;
+}
+
+/* Linha superior do rodapé (tfoot) */
+table tfoot {
+	border-top: solid 2px #efefef;
+}
+
+/* ================= TABELA ALTERNATIVA (.alt) ================= */
+
+/* Tabela alternativa com bordas separadas */
+table.alt {
+	border-collapse: separate; /* Faz as células não compartilharem borda */
+}
+
+/* Borda de 2px nas células da tabela alternativa */
+table.alt tbody tr td {
+	border: solid 2px #efefef;
+	border-left-width: 0; /* Remove borda esquerda padrão */
+	border-top-width: 0;  /* Remove borda superior padrão */
+}
+
+/* Primeira célula da linha recebe a borda esquerda */
+table.alt tbody tr td:first-child {
+	border-left-width: 2px;
+}
+
+/* Primeira linha recebe a borda superior */
+table.alt tbody tr:first-child td {
+	border-top-width: 2px;
+}
+
+/* Remove a linha inferior do cabeçalho na tabela alternativa */
+table.alt thead {
+	border-bottom: 0;
+}
+
+/* Remove a linha superior do rodapé na tabela alternativa */
+table.alt tfoot {
+	border-top: 0;
+}

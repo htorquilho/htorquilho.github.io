@@ -1,0 +1,513 @@
+/* ================= POPTROX ================= */
+
+/* Animação spin: roda um elemento 360 graus continuamente */
+
+/* Versão para Firefox */
+@-moz-keyframes spin {
+	0% {
+		-moz-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-moz-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+/* Versão para Webkit (Chrome, Safari) */
+@-webkit-keyframes spin {
+	0% {
+		-moz-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-moz-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+/* Versão para IE */
+@-ms-keyframes spin {
+	0% {
+		-moz-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-moz-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+/* Versão padrão */
+@keyframes spin {
+	0% {
+		-moz-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-moz-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+/* Popup Poptrox: caixa branca arredondada com sombra e overflow oculto */
+.poptrox-popup {
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	-ms-box-sizing: content-box;
+	box-sizing: content-box;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	background: #fff;
+	border-radius: 0.35em;
+	box-shadow: 0 0.1em 0.15em 0 rgba(0, 0, 0, 0.15);
+	overflow: hidden;
+	padding-bottom: 3em;
+}
+
+/* Loader dentro do popup: ícone animado girando (spin) */
+.poptrox-popup .loader {
+	text-decoration: none;
+	-moz-animation: spin 1s linear infinite;
+	-webkit-animation: spin 1s linear infinite;
+	-ms-animation: spin 1s linear infinite;
+	animation: spin 1s linear infinite;
+	font-size: 1.5em;
+	height: 1em;
+	left: 50%;
+	line-height: 1em;
+	margin: -0.5em 0 0 -0.5em;
+	position: absolute;
+	top: 50%;
+	width: 1em;
+}
+
+/* Ícone do loader usando Font Awesome */
+.poptrox-popup .loader:before {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	line-height: 1;
+	text-transform: none !important;
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;
+	content: '\f1ce'; /* Ícone spinner */
+}
+
+/* Legenda do popup, barra branca na parte inferior */
+.poptrox-popup .caption {
+	background: #fff;
+	bottom: 0;
+	cursor: default;
+	font-size: 0.9em;
+	height: 3em;
+	left: 0;
+	line-height: 2.8em;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	z-index: 1;
+}
+
+/* Navegação anterior e próxima dentro do popup */
+.poptrox-popup .nav-next,
+.poptrox-popup .nav-previous {
+	text-decoration: none;
+	-moz-transition: opacity 0.2s ease-in-out;
+	-webkit-transition: opacity 0.2s ease-in-out;
+	-ms-transition: opacity 0.2s ease-in-out;
+	transition: opacity 0.2s ease-in-out;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	background: rgba(0, 0, 0, 0.01);
+	cursor: pointer;
+	height: 100%;
+	opacity: 0; /* Inicialmente invisível */
+	position: absolute;
+	top: 0;
+	width: 50%;
+}
+
+/* Ícones para navegação (setas) */
+.poptrox-popup .nav-next:before,
+.poptrox-popup .nav-previous:before {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	line-height: 1;
+	text-transform: none !important;
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;
+	color: #fff;
+	font-size: 2.5em;
+	height: 1em;
+	line-height: 1em;
+	margin-top: -0.75em;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	width: 1.5em;
+}
+
+/* Posição da navegação próxima */
+.poptrox-popup .nav-next {
+	right: 0;
+}
+
+.poptrox-popup .nav-next:before {
+	content: '\f105'; /* Ícone seta para direita */
+	right: 0;
+}
+
+/* Posição da navegação anterior */
+.poptrox-popup .nav-previous {
+	left: 0;
+}
+
+.poptrox-popup .nav-previous:before {
+	content: '\f104'; /* Ícone seta para esquerda */
+	left: 0;
+}
+
+/* Botão fechar (x) no canto superior direito */
+.poptrox-popup .closer {
+	text-decoration: none;
+	-moz-transition: opacity 0.2s ease-in-out;
+	-webkit-transition: opacity 0.2s ease-in-out;
+	-ms-transition: opacity 0.2s ease-in-out;
+	transition: opacity 0.2s ease-in-out;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	color: #fff;
+	height: 4em;
+	line-height: 4em;
+	opacity: 0; /* Inicialmente invisível */
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 0;
+	width: 4em;
+	z-index: 2;
+}
+
+/* Ícone do fechar com borda arredondada */
+.poptrox-popup .closer:before {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	line-height: 1;
+	text-transform: none !important;
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	-ms-box-sizing: content-box;
+	box-sizing: content-box;
+	border-radius: 100%;
+	border: solid 3px rgba(255, 255, 255, 0.5);
+	content: '\f00d'; /* Ícone X */
+	display: block;
+	font-size: 1em;
+	height: 1.75em;
+	left: 50%;
+	line-height: 1.75em;
+	margin: -0.875em 0 0 -0.875em;
+	position: absolute;
+	top: 50%;
+	width: 1.75em;
+}
+
+/* Exibe a navegação e botão fechar com opacidade ao passar o mouse */
+.poptrox-popup:hover .nav-next,
+.poptrox-popup:hover .nav-previous {
+	opacity: 0.5;
+}
+
+.poptrox-popup:hover .nav-next:hover,
+.poptrox-popup:hover .nav-previous:hover {
+	opacity: 1.0;
+}
+
+.poptrox-popup:hover .closer {
+	opacity: 0.5;
+}
+
+.poptrox-popup:hover .closer:hover {
+	opacity: 1.0;
+}
+
+
+/* ================= TOUCH DEVICES ================= */
+
+/* Para dispositivos touch (ex: celular/tablet) */
+
+/* Imagem miniatura com sobreposição com opacidade menor */
+body.is-touch .image.thumb:before {
+	opacity: 0.5 !important;
+}
+
+/* Remove pseudo-elemento após da miniatura */
+body.is-touch .image.thumb:after {
+	display: none !important;
+}
+
+/* Ajusta o background do header para scroll e tamanho de background diferente */
+body.is-touch #header {
+	background-attachment: scroll;
+	background-size: auto, cover;
+}
+
+/* Deixa controles da poptrox totalmente visíveis em touch */
+body.is-touch .poptrox-popup .nav-next,
+body.is-touch .poptrox-popup .nav-previous,
+body.is-touch .poptrox-popup .closer {
+	opacity: 1.0 !important;
+}
+
+
+/* ================= MEDIA QUERIES ================= */
+
+/* XLarge - telas muito grandes até 1800px */
+@media screen and (max-width: 1800px) {
+	body, input, select, textarea {
+		font-size: 12pt; /* Fonte maior para telas grandes */
+	}
+}
+
+/* Large - telas grandes até 1280px */
+@media screen and (max-width: 1280px) {
+
+	/* Ajustes do header */
+	#header {
+		padding: 6em 3em 3em 3em;
+		width: 30%;
+	}
+
+	#header h1 {
+		font-size: 1.25em;
+	}
+
+	#header h1 br {
+		display: none; /* Remove quebra de linha no título */
+	}
+
+	#header > .inner {
+		margin-bottom: 0;
+	}
+
+	/* Ajustes do footer */
+	#footer .copyright li {
+		border-left-width: 0;
+		display: block;
+		line-height: 2.25em;
+		margin-left: 0;
+		padding-left: 0;
+	}
+
+	/* Ajustes do main */
+	#main {
+		margin-left: 30%;
+		max-width: none;
+		padding: 6em 3em 3em 3em;
+		width: calc(100% - 30%);
+	}
+}
+
+/* Medium - telas médias até 980px */
+@media screen and (max-width: 980px) {
+
+	/* Remove quebras de linha em títulos */
+	h1 br, h2 br, h3 br, h4 br, h5 br, h6 br {
+		display: none;
+	}
+
+	/* Ajuste de ícones em listas */
+	ul.icons li .icon {
+		font-size: 1.25em;
+	}
+
+	/* Ajustes do header */
+	#header {
+		background-attachment: scroll;
+		background-position: top left, center center;
+		background-size: auto, cover;
+		left: auto;
+		padding: 6em 4em;
+		position: relative;
+		text-align: center;
+		top: auto;
+		width: 100%;
+		display: block;
+	}
+
+	#header h1 {
+		font-size: 1.75em;
+	}
+
+	#header h1 br {
+		display: inline;
+	}
+
+	/* Ajustes do footer */
+	#footer {
+		background-attachment: scroll;
+		background-color: #1f1815;
+		background-image: url("/images/overlay.png"), url("/images/bg.jpg");
+		background-position: top left, bottom center;
+		background-repeat: repeat, no-repeat;
+		background-size: auto, cover;
+		bottom: auto;
+		left: auto;
+		padding: 4em 4em 6em 4em;
+		position: relative;
+		text-align: center;
+		width: 100%;
+	}
+
+	#footer .icons {
+		margin: 0 0 1em 0;
+	}
+
+	#footer .copyright {
+		margin: 0 0 1em 0;
+	}
+
+	#footer .copyright li {
+		border-left-width: 1px;
+		display: inline-block;
+		line-height: 1em;
+		margin-left: 0.75em;
+		padding-left: 0.75em;
+	}
+
+	/* Ajustes do main */
+	#main {
+		margin: 0;
+		padding: 6em 4em;
+		width: 100%;
+	}
+}
+
+/* Small - telas pequenas até 736px */
+@media screen and (max-width: 736px) {
+
+	/* Ajustes básicos de fontes em títulos */
+	h1 {
+		font-size: 1.5em;
+	}
+
+	h2 {
+		font-size: 1.2em;
+	}
+
+	h3 {
+		font-size: 1em;
+	}
+
+	/* Section e article especiais centralizados */
+	section.special, article.special {
+		text-align: center;
+	}
+
+	/* Título principal em header.major com tamanho menor */
+	header.major h2 {
+		font-size: 1.35em;
+	}
+
+	/* Lista com ícones rotulados com padding lateral */
+	ul.labeled-icons li {
+		padding-left: 2em;
+	}
+
+	ul.labeled-icons li h3 {
+		line-height: 1.75em;
+	}
+
+	/* Ajustes no header */
+	#header {
+		padding: 2.25em 1.5em;
+	}
+
+	#header h1 {
+		font-size: 1.35em;
+	}
+
+	.subline {
+		display: block;
+		font-size: 0.9em;
+	}
+
+	/* Ajustes no footer */
+	#footer {
+		padding: 2.25em 1.5em;
+	}
+
+	/* Ajustes no main */
+	#main {
+		padding: 2.25em 1.5em 0.25em 1.5em;
+	}
+
+	#main > section {
+		margin: 2.25em 0 0 0;
+		padding: 2.25em 0 0 0;
+	}
+
+	/* Ajustes para popup poptrox */
+	.poptrox-popup {
+		border-radius: 0;
+	}
+
+	.poptrox-popup .nav-next:before,
+	.poptrox-popup .nav-previous:before {
+		margin-top: -1em;
+	}
+}
+
+/* XSmall - telas muito pequenas até 480px */
+@media screen and (max-width: 480px) {
+
+	/* Ajustes no header */
+	#header {
+		padding: 4.5em 1.5em;
+	}
+
+	#header h1 br {
+		display: none;
+	}
+
+	/* Parágrafo na seção #three justificado */
+	#three p {
+		text-align: justify;
+	}
+
+	/* Ajustes no footer para links da copyright */
+	#footer .copyright li {
+		border-left-width: 0;
+		display: block;
+		line-height: 2.25em;
+		margin-left: 0;
+		padding-left: 0;
+	}
+}

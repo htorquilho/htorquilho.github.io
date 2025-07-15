@@ -1,0 +1,218 @@
+/* Base | basic */
+
+/* Define o modelo de box-sizing para todo o documento como border-box, 
+   fazendo com que padding e border sejam incluídos no tamanho total dos elementos */
+html {
+	box-sizing: border-box;
+}
+
+/* Faz com que todos os elementos e seus pseudo-elementos usem o box-sizing herdado (border-box) */
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+/* Define a cor de fundo do body como branco */
+body {
+	background: #fff;
+}
+
+/* Remove todas as animações e transições enquanto a classe "is-preload" estiver no body.
+   Isso geralmente serve para evitar transições indesejadas no carregamento inicial da página */
+body.is-preload *, body.is-preload *:before, body.is-preload *:after {
+	-moz-animation: none !important;
+	-webkit-animation: none !important;
+	-ms-animation: none !important;
+	animation: none !important;
+	-moz-transition: none !important;
+	-webkit-transition: none !important;
+	-ms-transition: none !important;
+	transition: none !important;
+}
+
+/* Define estilo base para textos e inputs da página:
+   Cor cinza claro (#a2a2a2), fonte "Source Sans Pro" ou alternativas, 
+   tamanho da fonte 16pt e espaçamento entre linhas de 1.75em */
+body, input, select, textarea {
+	color: #a2a2a2;
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	font-size: 16pt;
+	font-weight: 400;
+	line-height: 1.75em;
+}
+
+/* Estiliza os links:
+   - Transição suave de cor e borda quando o mouse passa por cima (0.2s)
+   - Remove o sublinhado padrão
+   - Cor azul #006DB2 */
+a {
+	-moz-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+	-webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+	-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+	transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+	border-bottom: none;
+	color: #006DB2;
+	text-decoration: none;
+}
+
+/* Quando o mouse passa por cima do link:
+   - Mantém a cor azul (com !important para forçar)
+   - Remove borda inferior
+   - Remove decoração do texto (sublinhado) */
+a:hover {
+	border-bottom-color: transparent;
+	color: #006DB2 !important;
+	text-decoration: none;
+}
+
+/* Estiliza textos em negrito:
+   - Cor cinza #787878
+   - Peso da fonte: normal (400), ou seja, não deixa o negrito tão pesado */
+strong, b {
+	color: #787878;
+	font-weight: 400;
+}
+
+/* Estiliza itálico e elementos <em> e <i> */
+em, i {
+	font-style: italic;
+}
+
+/* Define margem inferior padrão para parágrafos */
+p {
+	margin: 0 0 2em 0;
+}
+
+/* Estilo base para todos os títulos h1 a h6:
+   - Cor cinza #787878
+   - Peso da fonte normal (400)
+   - Sem margem superior e com margem inferior de 1em */
+h1, h2, h3, h4, h5, h6 {
+	color: #787878;
+	font-weight: 400;
+	line-height: 1em;
+	margin: 0 0 1em 0;
+}
+
+/* Links dentro dos títulos herdam a cor do título e não possuem sublinhado */
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+	color: inherit;
+	text-decoration: none;
+}
+
+/* Tamanhos e espaçamento específicos para cada nível de título */
+h1 {
+	font-size: 2em;
+	line-height: 1.5em;
+}
+
+h2 {
+	font-size: 1.5em;
+	line-height: 1.5em;
+}
+
+h3 {
+	font-size: 1.25em;
+	line-height: 1.5em;
+}
+
+h4 {
+	font-size: 1.1em;
+	line-height: 1.5em;
+}
+
+h5 {
+	font-size: 0.9em;
+	line-height: 1.5em;
+}
+
+h6 {
+	font-size: 0.7em;
+	line-height: 1.5em;
+}
+
+/* Estiliza sub e sup:
+   - Define tamanho menor
+   - Ajusta posição vertical */
+sub {
+	font-size: 0.8em;
+	position: relative;
+	top: 0.5em;
+}
+
+sup {
+	font-size: 0.8em;
+	position: relative;
+	top: -0.5em;
+}
+
+/* Linha horizontal padrão */
+hr {
+	border: 0;
+	border-bottom: solid 2px #efefef;
+	margin: 2em 0;
+}
+
+/* Variante maior da linha horizontal, com mais espaçamento */
+hr.major {
+	margin: 3em 0;
+}
+
+/* Estiliza blockquote (citações):
+   - Borda lateral esquerda cinza claro
+   - Texto itálico
+   - Espaçamento interno e externo */
+blockquote {
+	border-left: solid 6px #efefef;
+	font-style: italic;
+	margin: 0 0 2em 0;
+	padding: 0.5em 0 0.5em 1.5em;
+}
+
+/* Estilo de código inline:
+   - Fundo cinza claro
+   - Borda arredondada
+   - Borda fina cinza claro
+   - Fonte monoespaçada
+   - Espaçamento interno */
+code {
+	background: #f7f7f7;
+	border-radius: 0.35em;
+	border: solid 2px #efefef;
+	font-family: "Courier New", monospace;
+	font-size: 0.9em;
+	margin: 0 0.25em;
+	padding: 0.25em 0.65em;
+}
+
+/* Estilo para blocos de código <pre>:
+   - Rolagem horizontal em dispositivos touch
+   - Fonte monoespaçada
+   - Tamanho menor
+   - Margem inferior */
+pre {
+	-webkit-overflow-scrolling: touch;
+	font-family: "Courier New", monospace;
+	font-size: 0.9em;
+	margin: 0 0 2em 0;
+}
+
+/* Dentro de <pre>, o <code> vira um bloco com padding e rolagem horizontal */
+pre code {
+	display: block;
+	line-height: 1.75em;
+	padding: 1em 1.5em;
+	overflow-x: auto;
+}
+
+/* Classes utilitárias de alinhamento de texto */
+.align-left {
+	text-align: left;
+}
+
+.align-center {
+	text-align: center;
+}
+
+.align-right {
+	text-align: right;
+}

@@ -1,0 +1,223 @@
+/* Estiliza todos os botões da página, tanto os elementos nativos (input[type="submit"], reset, button)
+   quanto elementos com a classe .button. Serve para garantir aparência consistente. */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+.button {
+	/* Remove aparência padrão dos botões em navegadores */
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+
+	/* Suaviza a transição das cores e bordas ao interagir com o botão (hover, active) */
+	-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+	-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+	-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+	transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+
+	/* Estilo visual dos botões */
+	background-color: transparent; /* Fundo transparente por padrão */
+	border-radius: 0.35em; /* Bordas arredondadas */
+	border: solid 3px #efefef; /* Borda cinza claro */
+	color: #787878 !important; /* Cor do texto cinza */
+
+	cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+	display: inline-block; /* Permite definir largura e altura */
+	font-weight: 400; /* Peso normal da fonte */
+
+	/* Tamanhos do botão */
+	height: 3.15em; /* Altura mínima do botão */
+	height: calc(2.75em + 6px); /* Altura calculada para maior precisão */
+	line-height: 2.75em; /* Alinhamento vertical do texto */
+	min-width: 10em; /* Largura mínima */
+	padding: 0 1.5em; /* Espaçamento lateral interno */
+
+	text-align: center; /* Centraliza o texto */
+	text-decoration: none; /* Remove sublinhado */
+	white-space: nowrap; /* Impede quebra de linha */
+}
+
+/* Hover: muda a cor da borda e do texto quando o mouse passa por cima */
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:hover {
+	border-color: #006DB2; /* Azul */
+	color: #006DB2 !important;
+}
+
+/* Active: quando o botão é clicado */
+input[type="submit"]:active,
+input[type="reset"]:active,
+input[type="button"]:active,
+.button:active {
+	background-color: rgba(73, 169, 191, 0.1); /* Fundo levemente azul claro */
+	border-color: #006DB2;
+	color: #006DB2 !important;
+}
+
+/* Botões com ícones: adiciona padding lateral extra */
+input[type="submit"].icon,
+input[type="reset"].icon,
+input[type="button"].icon,
+.button.icon {
+	padding-left: 1.35em;
+}
+
+/* Espaçamento entre o ícone e o texto */
+input[type="submit"].icon:before,
+input[type="reset"].icon:before,
+input[type="button"].icon:before,
+.button.icon:before {
+	margin-right: 0.5em;
+}
+
+/* Classe .fit: faz o botão ocupar toda a largura do container */
+input[type="submit"].fit,
+input[type="reset"].fit,
+input[type="button"].fit,
+.button.fit {
+	min-width: 0;
+	width: 100%;
+}
+
+/* Tamanho pequeno */
+input[type="submit"].small,
+input[type="reset"].small,
+input[type="button"].small,
+.button.small {
+	font-size: 0.8em;
+}
+
+/* Tamanho grande */
+input[type="submit"].large,
+input[type="reset"].large,
+input[type="button"].large,
+.button.large {
+	font-size: 1.35em;
+}
+
+/* Botões primários: destaque com fundo e borda azul */
+input[type="submit"].primary,
+input[type="reset"].primary,
+input[type="button"].primary,
+.button.primary {
+	background-color: #006DB2;
+	border-color: #006DB2;
+	color: #ffffff !important; /* Texto branco */
+}
+
+/* Hover no botão primário: muda para azul mais claro */
+input[type="submit"].primary:hover,
+input[type="reset"].primary:hover,
+input[type="button"].primary:hover,
+.button.primary:hover {
+	background-color: #5c96c6;
+	border-color: #5c8cc6;
+}
+
+/* Active no botão primário: mantém a cor azul original */
+input[type="submit"].primary:active,
+input[type="reset"].primary:active,
+input[type="button"].primary:active,
+.button.primary:active {
+	background-color: #006DB2;
+	border-color: #006DB2;
+}
+
+/* Botão desabilitado ou com classe .disabled:
+   aparência esmaecida e cursor padrão */
+input[type="submit"].disabled, input[type="submit"]:disabled,
+input[type="reset"].disabled,
+input[type="reset"]:disabled,
+input[type="button"].disabled,
+input[type="button"]:disabled,
+.button.disabled,
+.button:disabled {
+	background-color: #e7e7e7 !important;
+	border-color: #e7e7e7 !important;
+	color: #b2b2b2 !important;
+	cursor: default;
+}
+
+/* Lista de ações:
+   ul.actions é usado para agrupar botões ou links de ação de forma flexível */
+ul.actions {
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	cursor: default; /* Mantém o cursor padrão (não pointer) */
+	list-style: none; /* Remove os marcadores da lista */
+	margin-left: -1em; /* Ajusta o espaçamento inicial */
+	padding-left: 0;
+}
+
+/* Cada item da lista recebe padding lateral */
+ul.actions li {
+	padding: 0 0 0 1em;
+	vertical-align: middle;
+}
+
+/* Classe especial para centralizar os itens dentro da ul */
+ul.actions.special {
+	-moz-justify-content: center;
+	-webkit-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+	width: 100%;
+	margin-left: 0;
+}
+
+/* Remove o padding esquerdo do primeiro item quando .special é usada */
+ul.actions.special li:first-child {
+	padding-left: 0;
+}
+
+/* Empilha os itens verticalmente em vez de lado a lado */
+ul.actions.stacked {
+	-moz-flex-direction: column;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	margin-left: 0;
+}
+
+/* Espaçamento vertical entre os itens quando empilhados */
+ul.actions.stacked li {
+	padding: 1.3em 0 0 0;
+}
+
+/* Remove o espaçamento do primeiro item */
+ul.actions.stacked li:first-child {
+	padding-top: 0;
+}
+
+/* Faz a lista ocupar mais espaço lateralmente para ajustar botões */
+ul.actions.fit {
+	width: calc(100% + 1em);
+}
+
+/* Cada item da lista cresce e ocupa o mesmo espaço */
+ul.actions.fit li {
+	-moz-flex-grow: 1;
+	-webkit-flex-grow: 1;
+	-ms-flex-grow: 1;
+	flex-grow: 1;
+	-moz-flex-shrink: 1;
+	-webkit-flex-shrink: 1;
+	-ms-flex-shrink: 1;
+	flex-shrink: 1;
+	width: 100%;
+}
+
+/* Faz os elementos internos dos <li> (botões, links, etc) ocuparem toda a largura */
+ul.actions.fit li > * {
+	width: 100%;
+}
+
+/* Quando combinado com .stacked, remove o cálculo lateral */
+ul.actions.fit.stacked {
+	width: 100%;
+}
