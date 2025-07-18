@@ -24,7 +24,7 @@
 	background-image: url("/images/overlay.png"), url("/images/bg.jpg"); /* Camada de overlay e imagem de fundo */
 	background-position: top left, top left; /* Posiciona ambas as imagens no topo à esquerda */
 	background-repeat: repeat, no-repeat; /* Overlay se repete, imagem principal não */
-	background-size: auto, 150%; /* Overlay tamanho automático, imagem ampliada 150% */
+	background-size: auto, 110%; /* Overlay tamanho automático, imagem ampliada 150% */
 	color: rgba(255, 255, 255, 0.5); /* Texto com branco translúcido */
 	height: 100%; /* Altura total da viewport */
 	left: 0; /* Posicionado à esquerda */
